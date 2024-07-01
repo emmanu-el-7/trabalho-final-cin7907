@@ -1,37 +1,37 @@
 class Veiculo:
-    def __init__(self):
-        self._cor = ''
-        self._marca = ''
-        self._modelo = ''
-        self._ano = ''
-        self._placa = ''
+    def __init__(self, cor, marca, modelo, ano, placa):
+        self.cor = cor
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.placa = placa
         
     def setCor(self, cor):
-        self._cor = cor
+        self.cor = cor
         
     def setMarca(self, marca):
-        self._marca = marca
+        self.marca = marca
         
     def setModelo(self, modelo):
-        self._modelo = modelo
+        self.modelo = modelo
     
     def setAno(self, ano):
-        self._ano = ano
+        self.ano = ano
     
     def setPlaca(self, placa):
-        self._placa = placa
+        self.placa = placa
         
     def getCor(self):
-        return self._cor
+        return self.cor
     
     def getMarca(self):
-        return self._marca
+        return self.marca
     
     def getModelo(self):
-        return self._modelo
+        return self.modelo
     
     def getAno(self):
-        return self._ano
+        return self.ano
     
     def getPlaca(self):
-        return self._placa
+        return self.placa
