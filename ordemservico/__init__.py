@@ -1,11 +1,15 @@
 class OrdemServico:
     def __init__(self):
+        self._cliente = ''
         self._data = ''
         self._problema = ''
         self._orcamento = ''
         self._pago = bool
         self._veiculo = ''
         
+    def setCliente(self, cliente):
+        self._cliente = cliente
+          
     def setData(self, data):
         self._data = data
         
@@ -20,6 +24,9 @@ class OrdemServico:
         
     def setVeiculo(self, veiculo):
         self._veiculo = veiculo
+        
+    def getCliente(self):
+        return self._cliente
         
     def getData(self):
         return self._data
