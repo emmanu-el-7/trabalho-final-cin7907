@@ -1,7 +1,9 @@
-from Veiculo import Veiculo
+from veiculo.carro import Carro
 
-veiculo1 = Veiculo()
+c1 = Carro('vermelho', 'chevrolet', 'corsa', 1096, 'MAX1F00')
 
-veiculo1.setCor('preto')
+print(c1.getCor())
 
-print(veiculo1.getCor())
+c1.setCor('prata')
+
+print(c1.getCor())
