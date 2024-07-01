@@ -1,11 +1,11 @@
 class OrdemServico:
     def __init__(self):
-        self._cliente = ''
+        self._cliente = ['''nome e contato ''']
         self._data = ''
         self._problema = ''
         self._orcamento = ''
         self._pago = bool
-        self._veiculo = ''
+        self._veiculo = ['''marca, modelo, ano''']
         
     def setCliente(self, cliente):
         self._cliente = cliente
