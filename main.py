@@ -1,7 +1,10 @@
-from Veiculo import Veiculo
+from ordemservico import OrdemServico
 
-veiculo1 = Veiculo()
+ordem1 = OrdemServico()
 
-veiculo1.setCor('preto')
+ordem1.setData('01/07/2024')
+ordem1.setProblema('Motor fundido')
+ordem1.setOrcamento('R$ 6000')
+ordem1.setVeiculo('Palio 2001')
 
-print(veiculo1.getCor())
+print(ordem1.imprime())
