@@ -1,7 +1,8 @@
 from veiculo import Veiculo
 
 class Carro(Veiculo):
-    '''Subclasse para carros'''
+    '''Subclasse para Carros'''
+    __carros = {}
     def __init__(self, cor, marca, modelo, ano, placa):
         super().__init__(cor, marca, modelo, ano, placa)
         self.__cor = cor
@@ -25,6 +26,10 @@ class Carro(Veiculo):
     def setPlaca(self, placa):
         self.__placa = placa
         
+    @classmethod
+    def setCarros(cls, placa, carro):
+        cls.__carros[placa] = carro
+        
     def getCor(self):
         return self.__cor
     
@@ -39,12 +44,11 @@ class Carro(Veiculo):
     
     def getPlaca(self):
         return self.__placa
-
-    # def cadastroCarro(tipo):
-    #     Veiculo.cadastroVeiculo('Carro')
+    
+    @classmethod
+    def getCarros(cls):
+        return cls.__carros
     
     @staticmethod
     def cadastroCarro(cor, marca, modelo, ano, placa):
         return Veiculo.cadastroVeiculo(Carro, marca, modelo, cor, ano, placa)
-    
-    

@@ -11,4 +11,6 @@ placa = st.text_input('Placa')
 
 if st.button('Cadastrar'):
     carro = Carro.cadastroCarro(cor, marca, modelo, ano, placa)
-    st.success(f'Carro {modelo} cadastrado com sucesso!')
+    carro.setCarros(carro.placa, carro)
+    print(carro.getCarros())
+    st.success(f'Carro cadastrado com sucesso!')

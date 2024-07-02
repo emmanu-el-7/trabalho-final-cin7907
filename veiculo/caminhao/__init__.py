@@ -1,6 +1,8 @@
 from veiculo import Veiculo
+
 class Caminhao(Veiculo):
-    '''Subclasse para caminhoes'''
+    '''Subclasse para caminhões'''
+    __caminhoes = {}
     def __init__(self, cor, marca, modelo, ano, placa):
         super().__init__(cor, marca, modelo, ano, placa)
         self.__cor = cor
@@ -24,6 +26,10 @@ class Caminhao(Veiculo):
     def setPlaca(self, placa):
         self.__placa = placa
         
+    @classmethod
+    def setCaminhoes(cls, placa, caminhao):
+        cls.__caminhoes[placa] = caminhao
+        
     def getCor(self):
         return self.__cor
     
@@ -39,9 +45,11 @@ class Caminhao(Veiculo):
     def getPlaca(self):
         return self.__placa
     
-    # def cadastroCaminha(tipo):
-    #     Veiculo.cadastroVeiculo('Caminhao')
+    @classmethod
+    def getCaminhoes(cls):
+        return cls.__caminhoes
     
     @staticmethod
     def cadastroCaminhao(cor, marca, modelo, ano, placa):
         return Veiculo.cadastroVeiculo(Caminhao, marca, modelo, cor, ano, placa)
+    

@@ -1,7 +1,7 @@
 import streamlit as st
 from veiculo.caminhao import Caminhao
 
-st.header('''Cadastro de caminhões''')
+st.header('''Cadastro de Caminhoes''')
 
 marca = st.text_input('Marca')
 modelo = st.text_input('Modelo')
@@ -11,4 +11,6 @@ placa = st.text_input('Placa')
 
 if st.button('Cadastrar'):
     caminhao = Caminhao.cadastroCaminhao(cor, marca, modelo, ano, placa)
-    st.success(f'Caminhão {modelo} cadastrado com sucesso!')
+    caminhao.setCaminhoes(caminhao.placa, caminhao)
+    print(caminhao.getCaminhoes())
+    st.success(f'Caminhão cadastrado com sucesso!')

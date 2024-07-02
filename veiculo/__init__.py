@@ -1,10 +1,17 @@
 class Veiculo:
+    # carros = {}
+    # motos = {}
+    # caminhoes = {}
+    
     def __init__(self, cor, marca, modelo, ano, placa):
         self.cor = cor
         self.marca = marca
         self.modelo = modelo
         self.ano = ano
         self.placa = placa
+        # self.carros = carros
+        # self.motos = motos
+        # self.caminhoes = caminhoes
         
     def setCor(self, cor):
         self.cor = cor
@@ -21,6 +28,15 @@ class Veiculo:
     def setPlaca(self, placa):
         self.placa = placa
         
+    # def setCarros(self, placa, carro):
+    #     self.__carros[placa] = carro
+        
+    # def setMotos(self, placa, moto):
+    #     self.__motos[placa] = moto
+        
+    # def setCaminhoes(self, placa, caminhao):
+    #     self.__caminhoes[placa] = caminhao
+        
     def getCor(self):
         return self.cor
     
@@ -36,18 +52,14 @@ class Veiculo:
     def getPlaca(self):
         return self.placa
     
-    # def cadastroVeiculo(dicionario):
-        
-    #     tipo = str(input('Qual o tipo de veículo? (Carro, Moto, Caminhão) ')).capitalize()
-    #     marca = str(input(f'Qual a marca do(a) {tipo}? '))
-    #     modelo = str(input(f'Qual a marca do(a) {marca}? '))
-    #     cor = str(input(f'Qual a cor do(a) {modelo}? '))
-    #     ano = str(input(f'Qual o ano do(a) {modelo}? '))
-    #     placa = str(input(f'Qual a placa do(a) {modelo}? '))
-        
-    #     dicionario[placa] = tipo(marca, modelo, cor, ano, placa)
-        
-    #     return print(f'{tipo} cadastrado(a) com sucesso!!')
+    # def getCaminhoes(self):
+    #     return self.caminhao
+    
+    # def getCarros(self):
+    #     return self.carro
+    
+    # def getMotos(self):
+    #     return self.moto
     
     @staticmethod
     def cadastroVeiculo(tipo, marca, modelo, cor, ano, placa):
