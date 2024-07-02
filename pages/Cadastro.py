@@ -25,7 +25,7 @@ if moto:
     marca = st.text_input('Marca')
     modelo = st.text_input('Modelo')
     cor = st.text_input('Cor')
-    ano = st.text_imput('Ano')
+    ano = st.text_input('Ano')
     placa = st.text_input('Placa')
     if st.button('Cadastrar'):
         moto = Moto.cadastroMoto(cor, marca, modelo, ano, placa)
