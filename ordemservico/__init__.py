@@ -1,12 +1,16 @@
 class OrdemServico:
     '''Classe para ordens de serviço.'''
     def __init__(self):
+        self._cliente = ['''nome e contato ''']
         self._data = ''
         self._problema = ''
         self._orcamento = ''
         self._pago = bool
-        self._veiculo = ''
+        self._veiculo = ['''marca, modelo, ano''']
         
+    def setCliente(self, cliente):
+        self._cliente = cliente
+          
     def setData(self, data):
         self._data = data
         
@@ -21,6 +25,9 @@ class OrdemServico:
         
     def setVeiculo(self, veiculo):
         self._veiculo = veiculo
+        
+    def getCliente(self):
+        return self._cliente
         
     def getData(self):
         return self._data
