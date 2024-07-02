@@ -64,4 +64,3 @@ class Veiculo:
     @staticmethod
     def cadastroVeiculo(tipo, marca, modelo, cor, ano, placa):
         return tipo(cor, marca, modelo, ano, placa)
-

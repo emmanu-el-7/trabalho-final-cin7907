@@ -1,4 +1,5 @@
 from veiculo import Veiculo
+import pandas as pd
 
 class Moto(Veiculo):
     '''Subclasse para motos'''
@@ -25,6 +26,7 @@ class Moto(Veiculo):
     
     def setPlaca(self, placa):
         self.__placa = placa
+        
         
     @classmethod
     def setMotos(cls, placa, moto):
@@ -53,3 +55,14 @@ class Moto(Veiculo):
     def cadastroMoto(cor, marca, modelo, ano, placa):
         return Veiculo.cadastroVeiculo(Moto, marca, modelo, cor, ano, placa)
     
+    @classmethod
+    def getMotosDataFrame(cls):
+        motos = cls.getMotos()
+        data = {
+            'Marca': [moto.marca for moto in motos.values()],
+            'Modelo': [moto.modelo for moto in motos.values()],
+            'Cor': [moto.cor for moto in motos.values()],
+            'Ano': [moto.ano for moto in motos.values()],
+            'Placa': [moto.placa for moto in motos.values()]
+        }
+        return pd.DataFrame(data)

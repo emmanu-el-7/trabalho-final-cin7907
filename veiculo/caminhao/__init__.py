@@ -1,4 +1,5 @@
 from veiculo import Veiculo
+import pandas as pd
 
 class Caminhao(Veiculo):
     '''Subclasse para caminhões'''
@@ -53,3 +54,14 @@ class Caminhao(Veiculo):
     def cadastroCaminhao(cor, marca, modelo, ano, placa):
         return Veiculo.cadastroVeiculo(Caminhao, marca, modelo, cor, ano, placa)
     
+    @classmethod
+    def getCaminhoesDataFrame(cls):
+        caminhoes = cls.getCaminhoes()
+        data = {
+            'Marca': [carro.marca for carro in caminhoes.values()],
+            'Modelo': [carro.modelo for carro in caminhoes.values()],
+            'Cor': [carro.cor for carro in caminhoes.values()],
+            'Ano': [carro.ano for carro in caminhoes.values()],
+            'Placa': [carro.placa for carro in caminhoes.values()]
+        }
+        return pd.DataFrame(data)
