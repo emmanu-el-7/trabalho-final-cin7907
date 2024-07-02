@@ -13,7 +13,7 @@ if carro:
     marca = st.text_input('Marca')
     modelo = st.text_input('Modelo')
     cor = st.text_input('Cor')
-    ano = st.number_input('Ano', min_value=1900, max_value=2100)
+    ano = st.text_input('Ano')
     placa = st.text_input('Placa')
     if st.button('Cadastrar'):
         carro = Carro.cadastroCarro(cor, marca, modelo, ano, placa)
@@ -25,7 +25,7 @@ if moto:
     marca = st.text_input('Marca')
     modelo = st.text_input('Modelo')
     cor = st.text_input('Cor')
-    ano = st.number_input('Ano', min_value=1900, max_value=2100, step=1)
+    ano = st.text_imput('Ano')
     placa = st.text_input('Placa')
     if st.button('Cadastrar'):
         moto = Moto.cadastroMoto(cor, marca, modelo, ano, placa)
@@ -39,7 +39,7 @@ if caminhao:
     marca = st.text_input('Marca')
     modelo = st.text_input('Modelo')
     cor = st.text_input('Cor')
-    ano = st.number_input('Ano', min_value=1900, max_value=2100, step=1)
+    ano = st.text_input('Ano')
     placa = st.text_input('Placa')
     if st.button('Cadastrar'):
         caminhao = Caminhao.cadastroCaminhao(cor, marca, modelo, ano, placa)
