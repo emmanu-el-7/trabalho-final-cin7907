@@ -38,3 +38,6 @@ class Motocicleta(Veiculo):
     
     def getPlaca(self):
         return self.__placa
+    
+    def cadastroMoto(tipo):
+        Veiculo.cadastroVeiculo('Motocicleta')

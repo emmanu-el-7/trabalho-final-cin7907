@@ -1,4 +1,5 @@
 class OrdemServico:
+    '''Classe para ordens de serviço.'''
     def __init__(self):
         self._data = ''
         self._problema = ''

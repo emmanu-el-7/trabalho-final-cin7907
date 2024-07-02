@@ -1,4 +1,5 @@
 from veiculo import Veiculo
+
 class Carro(Veiculo):
     '''Subclasse para carros'''
     def __init__(self, cor, marca, modelo, ano, placa):
@@ -38,3 +39,6 @@ class Carro(Veiculo):
     
     def getPlaca(self):
         return self.__placa
+
+    def cadastroCarro(tipo):
+        Veiculo.cadastroVeiculo('Carro')

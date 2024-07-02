@@ -1,4 +1,5 @@
 class Cliente:
+    '''Classe para clientes'''
     def __init__(self):
         self._nome = ''
         self.contato = ''

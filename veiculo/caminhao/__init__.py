@@ -38,3 +38,6 @@ class Caminhao(Veiculo):
     
     def getPlaca(self):
         return self.__placa
+    
+    def cadastroCaminha(tipo):
+        Veiculo.cadastroVeiculo('Caminhao')
