@@ -39,5 +39,9 @@ class Caminhao(Veiculo):
     def getPlaca(self):
         return self.__placa
     
-    def cadastroCaminha(tipo):
-        Veiculo.cadastroVeiculo('Caminhao')
+    # def cadastroCaminha(tipo):
+    #     Veiculo.cadastroVeiculo('Caminhao')
+    
+    @staticmethod
+    def cadastroCaminhao(cor, marca, modelo, ano, placa):
+        return Veiculo.cadastroVeiculo(Caminhao, marca, modelo, cor, ano, placa)

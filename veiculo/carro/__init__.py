@@ -40,5 +40,11 @@ class Carro(Veiculo):
     def getPlaca(self):
         return self.__placa
 
-    def cadastroCarro(tipo):
-        Veiculo.cadastroVeiculo('Carro')
+    # def cadastroCarro(tipo):
+    #     Veiculo.cadastroVeiculo('Carro')
+    
+    @staticmethod
+    def cadastroCarro(cor, marca, modelo, ano, placa):
+        return Veiculo.cadastroVeiculo(Carro, marca, modelo, cor, ano, placa)
+    
+    

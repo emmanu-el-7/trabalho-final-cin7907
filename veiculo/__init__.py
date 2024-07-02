@@ -36,15 +36,20 @@ class Veiculo:
     def getPlaca(self):
         return self.placa
     
-    def cadastroVeiculo(dicionario):
+    # def cadastroVeiculo(dicionario):
         
-        tipo = str(input('Qual o tipo de veículo? (Carro, Moto, Caminhão) ')).capitalize()
-        marca = str(input(f'Qual a marca do(a) {tipo}? '))
-        modelo = str(input(f'Qual a marca do(a) {marca}? '))
-        cor = str(input(f'Qual a cor do(a) {modelo}? '))
-        ano = str(input(f'Qual o ano do(a) {modelo}? '))
-        placa = str(input(f'Qual a placa do(a) {modelo}? '))
+    #     tipo = str(input('Qual o tipo de veículo? (Carro, Moto, Caminhão) ')).capitalize()
+    #     marca = str(input(f'Qual a marca do(a) {tipo}? '))
+    #     modelo = str(input(f'Qual a marca do(a) {marca}? '))
+    #     cor = str(input(f'Qual a cor do(a) {modelo}? '))
+    #     ano = str(input(f'Qual o ano do(a) {modelo}? '))
+    #     placa = str(input(f'Qual a placa do(a) {modelo}? '))
         
-        dicionario[placa] = tipo(marca, modelo, cor, ano, placa)
+    #     dicionario[placa] = tipo(marca, modelo, cor, ano, placa)
         
-        return print(f'{tipo} cadastrado(a) com sucesso!!')
+    #     return print(f'{tipo} cadastrado(a) com sucesso!!')
+    
+    @staticmethod
+    def cadastroVeiculo(tipo, marca, modelo, cor, ano, placa):
+        return tipo(cor, marca, modelo, ano, placa)
+
